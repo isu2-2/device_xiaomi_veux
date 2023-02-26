@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_veux.mk
+    $(LOCAL_DIR)/nusantara_veux.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_veux-user \
-    evolution_veux-userdebug \
-    evolution_veux-eng
+    nusantara_veux-user \
+    nusantara_veux-userdebug \
+    nusantara_veux-eng
