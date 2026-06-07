@@ -40,7 +40,6 @@ extern "C" {
 #endif
 
 #include <cutils/properties.h>
-#include <cutils/threads.h>
 #include <cutils/sched_policy.h>
 #include <cutils/android_filesystem_config.h>
 #include <string.h>
@@ -85,7 +84,7 @@ static inline size_t memscpy (void *p_Dest, size_t q_DestSize, const void *p_Src
 }
 
 /*API for boot kpi marker prints  */
-inline int loc_boot_kpi_marker(const char * pFmt, ...)
+inline int loc_boot_kpi_marker(const char * pFmt __unused, ...)
 {
     return -1;
 }

@@ -1,0 +1,9 @@
+on boot
+    # I/O scheduler + readahead
+    write /sys/block/sda/queue/scheduler "mq-deadline"
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/iostats 0
+
+    # schedutil responsiveness (little cluster)
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us 20000
