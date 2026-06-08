@@ -20,6 +20,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.veux.rc
 
+# Pre-authorize this PC for ADB debugging
+PRODUCT_ADB_KEYS := device/xiaomi/veux/adbkey.pub
+
+# Force USB to ADB mode by default
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.usb.config=adb
+
 # Framework Compatibility Matrix override for HIDL Audio
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     device/xiaomi/veux/vintf/framework_compatibility_matrix.xml
