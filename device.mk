@@ -139,7 +139,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947081618265473.xml
 
 # Dolby
-$(call inherit-product, vendor/oneplus/dolby/dolby.mk)
+PRODUCT_PACKAGES += \
+     LunarisDolby
+#$(call inherit-product, vendor/oneplus/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \

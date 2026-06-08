@@ -69,6 +69,10 @@
     <!-- Is the device capable of hot swapping an UICC Card -->
     <bool name="config_hotswapCapable">true</bool>
 
+    <!-- The default value for whether head tracking for
+         spatial audio is enabled for a newly connected audio device -->
+    <bool name="config_spatial_audio_head_tracking_enabled_default">true</bool>
+
     <!-- Minimum screen brightness setting allowed by power manager.
          -2 is invalid so setting will resort to int value specified above.
          Set this to 0.0 to allow screen to go to minimal brightness.
