@@ -96,20 +96,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio configuration files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info_qrd.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_qrd.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    $(LOCAL_PATH)/configs/audio/sku_holi/audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_holi/audio_policy_configuration_7_0.xml \
-    $(LOCAL_PATH)/configs/audio/sku_holi/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_holi/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/sku1_AW88261.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku1_AW88261.xml \
-    $(LOCAL_PATH)/configs/audio/sku1_FS1962.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku1_FS1962.xml \
-    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sound_trigger_platform_info.xml \
-    $(LOCAL_PATH)/configs/audio/sku_holi/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_holi/audio_io_policy.conf
-
-PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/holi/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio/$(AUDIO_SKU_DIR)/audio_io_policy.conf \
     $(AUDIO_HAL_DIR)/configs/holi/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
 
@@ -162,8 +148,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/displayconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947081618265473.xml
 
 # Dolby
-PRODUCT_PACKAGES += \
-     LunarisDolby
 $(call inherit-product, vendor/oneplus/dolby/dolby.mk)
 
 # DRM
@@ -184,9 +168,9 @@ PRODUCT_PACKAGES += \
     libfmjni
 
 # Google Apps
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/superior/overlay/gapps
+#$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+#PRODUCT_PACKAGE_OVERLAYS += \
+#    vendor/superior/overlay/gapps
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -308,8 +292,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayVEUX \
-    frameworksVeux \
-    packagesVeux \
     NcmTetheringOverlay \
     SettingsOverlayVEUX \
     SystemUIOverlayVEUX \
