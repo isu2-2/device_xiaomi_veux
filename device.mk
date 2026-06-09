@@ -287,6 +287,19 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
+PRODUCT_PACKAGES += \
+    DialerOverlayVeux \
+    FrameworksResOverlayVeux \
+    SettingsOverlayVeux \
+    SettingsProviderOverlayVeux \
+    SystemUIOverlayVeux \
+    SimpleDeviceConfigOverlayVeux \
+    SettingsLibOverlayVeux \
+    TelephonyOverlayVeux \
+    TetheringResOverlayVeux \
 
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayCOMMON \
@@ -295,6 +308,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     FrameworkOverlayVEUX \
+    frameworksVeux \
+    packagesVeux \
     NcmTetheringOverlay \
     SettingsOverlayVEUX \
     SystemUIOverlayVEUX \
